@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://igorpejic.com/contact/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://igorpejic.com/online_presence/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://igorpejic.com/</loc>
   </url>
   
