@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://igorpejic.com/blogs/dotfiles/</loc>
+    <loc>https://igorpejic.com/posts/dotfiles/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/posts/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://igorpejic.com/contact/</loc>
   </url><url>
     <loc>https://igorpejic.com/online_presence/</loc>
   </url><url>
-    <loc>https://igorpejic.com/blogs/</loc>
-  </url><url>
     <loc>https://igorpejic.com/categories/</loc>
-  </url><url>
-    <loc>https://igorpejic.com/</loc>
   </url><url>
     <loc>https://igorpejic.com/tags/</loc>
   </url>
