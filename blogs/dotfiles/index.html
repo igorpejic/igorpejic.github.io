@@ -112,7 +112,12 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#tools-i-enjoy">Tools I enjoy</a>
       <ul>
         <li><a href="#my-toolset">My Toolset</a></li>
-        <li><a href="#my-dotfiles">My Dotfiles</a></li>
+        <li><a href="#my-dotfiles">My Dotfiles</a>
+          <ul>
+            <li><a href="#xmodmap">Remapping Caps Lock to Windows (Mod) key</a></li>
+            <li><a href="#seamless-switching-between-docked--mobile-modes">Seamless switching between docked / mobile modes</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -156,7 +161,40 @@ https://github.com/alex-shpak/hugo-book
 In Linux, hidden files are identified with a leading dot (<code>.</code>). Since the configuration files are usually hidden, they are nicknamed &ldquo;dotfiles&rdquo;.</p>
 <p>For an up to date list of tools and configuration files, see:
 <a href="https://github.com/igorpejic/dotfiles">https://github.com/igorpejic/dotfiles</a></p>
-</article>
+<hr>
+<h3 id="xmodmap">
+  Remapping Caps Lock to Windows (Mod) key
+  <a class="anchor" href="#xmodmap">#</a>
+</h3>
+<blockquote>
+<p>I wish to arbitrarily remap keys to different functions at a low-level.</p>
+</blockquote>
+<p>Touch-typing means fingers are on the home row most of the time.</p>
+<p>Using i3 window manager, modifier key is a central key for navigating / executing.
+For comfort, I rather have the modifier key be in their line than to have to move the pinkie south-east to press the windows key.</p>
+<p>Therefore, disable Caps Lock and make it into the Windows key.</p>
+<p><code>.Xmodmap</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>! maps caps lock into <span style="color:#e6db74">&#34;WIN_KEY&#34;</span>
+</span></span><span style="display:flex;"><span>clear control
+</span></span><span style="display:flex;"><span>keycode 66 <span style="color:#f92672">=</span> Super_L
+</span></span><span style="display:flex;"><span>add control <span style="color:#f92672">=</span> Control_L Control_R
+</span></span><span style="display:flex;"><span>clear lock
+</span></span></code></pre></div><p>and activate it with:</p>
+<pre tabindex="0"><code>xmodmap ~/.Xmodmap
+</code></pre><h3 id="seamless-switching-between-docked--mobile-modes">
+  Seamless switching between docked / mobile modes
+  <a class="anchor" href="#seamless-switching-between-docked--mobile-modes">#</a>
+</h3>
+<blockquote>
+<p>I wish plugging in monitors / keyboards to work out of the box.</p>
+</blockquote>
+<p>When I plug in the laptop into a docking station, I wish the screens to automatically get set to the correct resolutions and position.
+I also wish the keyboard layout to be <a href="#xmodmap">correctly configured</a>.</p>
+<p><a href="https://github.com/phillipberndt/autorandr">Autorandr</a> is a great tool which can automatically select a display configuration based on the connected devices.</p>
+<p>It also offers a <code>postswitch</code> event firing after the display get auto-changed, to which we can link the keyboard mapping changes:</p>
+<p><code>~/.config/autorandr/postswitch</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xmodmap ~/.Xmodmap
+</span></span></code></pre></div></article>
  
       
 
@@ -200,7 +238,12 @@ In Linux, hidden files are identified with a leading dot (<code>.</code>). Since
     <li><a href="#tools-i-enjoy">Tools I enjoy</a>
       <ul>
         <li><a href="#my-toolset">My Toolset</a></li>
-        <li><a href="#my-dotfiles">My Dotfiles</a></li>
+        <li><a href="#my-dotfiles">My Dotfiles</a>
+          <ul>
+            <li><a href="#xmodmap">Remapping Caps Lock to Windows (Mod) key</a></li>
+            <li><a href="#seamless-switching-between-docked--mobile-modes">Seamless switching between docked / mobile modes</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
