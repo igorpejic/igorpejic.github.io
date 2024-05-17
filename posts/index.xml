@@ -6,7 +6,18 @@
     <description>Recent content in Blog on Igor Pejic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://igorpejic.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://igorpejic.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tools I enjoy</title>
+      <link>https://igorpejic.com/posts/interaface_error/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://igorpejic.com/posts/interaface_error/</guid>
+      <description>Background # Stack: gunicorn + Django + pyscopg2
+Error InterfaceError: Connection already closed started appearing after performing new deploys of the application. These errors would appear from multiple gunicorn workers at the same time some 60 seconds after the workers would initialize.
+Understanding the stacktrace # The error indicates that when Django ORM attempted to perform an SQL query through an open Psycopg2 connection, the connection was already closed. Django tries to execute the query through the assumed open connection, but when it is closed, the error occurs.</description>
+    </item>
+    
     <item>
       <title>Tools I enjoy</title>
       <link>https://igorpejic.com/posts/dotfiles/</link>

@@ -141,6 +141,30 @@ https://github.com/alex-shpak/hugo-book
   
   <article class="markdown book-post">
     <h2>
+      <a href="/posts/interaface_error/">Django InterfaceError: Connection already closed</a>
+    </h2>
+    
+  <h5>May 17, 2024</h5>
+
+
+
+  
+
+  
+
+
+
+
+    <p>Background # Stack: gunicorn + Django + pyscopg2
+Error InterfaceError: Connection already closed started appearing after performing new deploys of the application. These errors would appear from multiple gunicorn workers at the same time some 60 seconds after the workers would initialize.
+Understanding the stacktrace # The error indicates that when Django ORM attempted to perform an SQL query through an open Psycopg2 connection, the connection was already closed. Django tries to execute the query through the assumed open connection, but when it is closed, the error occurs.
+        <a href="/posts/interaface_error/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
       <a href="/posts/dotfiles/">Tools I enjoy</a>
     </h2>
     
