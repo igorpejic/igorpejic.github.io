@@ -6,29 +6,28 @@
     <description>Recent content in Blog on Igor Pejic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://igorpejic.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://igorpejic.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Last Call for Programmer Jobs</title>
+      <link>https://igorpejic.com/posts/programmer_job_last_call/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://igorpejic.com/posts/programmer_job_last_call/</guid>
+      <description>The landscape of software engineering is undergoing a seismic shift. Rapid advancements in artificial intelligence are signaling what I believe to be the last call for traditional programmer jobs. This is likely the last chance to secure a &amp;ldquo;traditional programming job&amp;rdquo; and if you identify solely as a &amp;ldquo;programmer,&amp;rdquo; now is the time to act decisively. It might be necessary to contemplate a strategic pivot in your career to stay relevant in an increasingly AI-driven industry.</description>
+    </item>
     <item>
       <title>Tools I enjoy</title>
       <link>https://igorpejic.com/posts/interaface_error/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://igorpejic.com/posts/interaface_error/</guid>
-      <description>Background # Stack: gunicorn + Django + pyscopg2
-Error InterfaceError: Connection already closed started appearing after performing new deploys of the application. These errors would appear from multiple gunicorn workers at the same time some 60 seconds after the workers would initialize.
-Understanding the stacktrace # The error indicates that when Django ORM attempted to perform an SQL query through an open Psycopg2 connection, the connection was already closed. Django tries to execute the query through the assumed open connection, but when it is closed, the error occurs.</description>
+      <description>Background # Stack: gunicorn + Django + pyscopg2&#xA;Error InterfaceError: Connection already closed started appearing after performing new deploys of the application. These errors would appear from multiple gunicorn workers at the same time some 60 seconds after the workers would initialize.&#xA;Understanding the stacktrace # The error indicates that when Django ORM attempted to perform an SQL query through an open Psycopg2 connection, the connection was already closed. Django tries to execute the query through the assumed open connection, but when it is closed, the error occurs.</description>
     </item>
-    
     <item>
       <title>Tools I enjoy</title>
       <link>https://igorpejic.com/posts/dotfiles/</link>
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://igorpejic.com/posts/dotfiles/</guid>
-      <description>Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.
-From: The Pragmatic Programmer by Andy Hunt
-Many years of professional software engineering have led to my opinionated list of tools and their configurations that are a daily driver to get things done.
-My Toolset # If I had to describe my toolset it would be:</description>
+      <description>Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.&#xA;From: The Pragmatic Programmer by Andy Hunt&#xA;Many years of professional software engineering have led to my opinionated list of tools and their configurations that are a daily driver to get things done.&#xA;My Toolset # If I had to describe my toolset it would be:</description>
     </item>
-    
   </channel>
 </rss>
