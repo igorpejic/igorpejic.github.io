@@ -1,0 +1,44 @@
+# h1::before {
+#   color: var(--darkMaincolor);
+#   content: "# ";
+# }
+# h2::before {
+#   color: var(--darkMaincolor);
+#   content: "## ";
+# }
+# h3::before {
+#   color: var(--darkMaincolor);
+#   content: "### ";
+# }
+# h4::before {
+#   color: var(--darkMaincolor);
+#   content: "#### ";
+# }
+# h5::before {
+#   color: var(--darkMaincolor);
+#   content: "##### ";
+# }
+# h6::before {
+#   color: var(--darkMaincolor);
+#   content: "###### ";
+# }
+# 
+# h1 {
+#   font-size: 1.8rem;
+#   margin-top: 1.5em;
+# }
+# 
+# h2 {
+#   font-size: 1.6rem;
+#   margin-top: 1.5em;
+# }
+# 
+# h3 {
+#   font-size: 1.4rem;
+#   margin-top: 1.5em;
+# }
+# 
+# h4 {
+#   font-size: 1.2rem;
+#   margin-top: 1.5em;
+# }
