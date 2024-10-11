@@ -8,6 +8,9 @@
     <loc>https://igorpejic.com/posts/interaface_error/</loc>
     <lastmod>2024-05-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://igorpejic.com/posts/no_build_django_perspective/</loc>
+    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://igorpejic.com/posts/dotfiles/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,6 +20,27 @@
     <loc>https://igorpejic.com/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://igorpejic.com/tags/concurrency/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/tags/gil/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/posts/gil/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/tags/pep-703/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/tags/python/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/tags/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://igorpejic.com/posts/keyboard_productivity/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://igorpejic.com/about/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -24,7 +48,5 @@
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://igorpejic.com/categories/</loc>
-  </url><url>
-    <loc>https://igorpejic.com/tags/</loc>
   </url>
 </urlset>

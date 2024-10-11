@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Global Interpreter Lock (GIL) in Python: Past, Present, and Future - Igor Pejic&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&rsquo;s concurrency model.
+What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Global Interpreter Lock (GIL) in Python: Past, Present, and Future" />
+<meta property="og:description" content="Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&rsquo;s concurrency model.
+What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://igorpejic.com/posts/gil/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-25T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Global Interpreter Lock (GIL) in Python: Past, Present, and Future"/>
+<meta name="twitter:description" content="Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&rsquo;s concurrency model.
+What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once."/>
+<script src="https://igorpejic.com/js/feather.min.js"></script>
+	
+	
+        <link href="https://igorpejic.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://igorpejic.com/css/main.5cebd7d4fb2b97856af8d32a6def16164fcf7d844e98e236fcb3559655020373.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://igorpejic.com/css/dark.d22e2a2879d933a4b781535fc4c4c716e9f9d35ea4986dd0cbabda82effc4bdd.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://igorpejic.com/css/custom.325415b418af84e8606020a1ab5ae272a6bb8ddc59991f3110742cfcc85c6d02.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://igorpejic.com/">Igor Pejic&#39;s Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/contact">Contact</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://igorpejic.com/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Global Interpreter Lock (GIL) in Python: Past, Present, and Future</h1>
+			<div class="meta">Posted on Nov 25, 2023</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<h1 id="understanding-the-global-interpreter-lock-gil-in-python">Understanding the Global Interpreter Lock (GIL) in Python</h1>
+<p>The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&rsquo;s concurrency model.</p>
+<h2 id="what-is-the-gil">What is the GIL?</h2>
+<p>The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. This lock is necessary mainly because CPython&rsquo;s memory management is not thread-safe.</p>
+<h2 id="why-does-the-gil-exist">Why does the GIL exist?</h2>
+<ol>
+<li>
+<p><strong>Memory Management</strong>: Python uses reference counting for memory management. The GIL prevents race conditions and ensures that reference counts are properly managed.</p>
+</li>
+<li>
+<p><strong>Simplicity</strong>: The GIL simplifies the CPython implementation by removing the need for subtle synchronization primitives in the interpreter.</p>
+</li>
+<li>
+<p><strong>C Extension Compatibility</strong>: Many C extensions for Python are not thread-safe. The GIL provides a simple way to make these extensions thread-safe without major rewrites.</p>
+</li>
+</ol>
+<h2 id="implications-of-the-gil">Implications of the GIL</h2>
+<ol>
+<li>
+<p><strong>Single-Core Performance</strong>: In CPU-bound and multi-threaded code, the GIL can become a bottleneck, effectively limiting the program to use only one CPU core.</p>
+</li>
+<li>
+<p><strong>I/O-Bound Tasks</strong>: For I/O-bound and multi-threaded code, the GIL is generally not a problem because it is released during I/O operations.</p>
+</li>
+<li>
+<p><strong>Multiprocessing</strong>: To bypass the GIL and utilize multiple CPU cores, developers often use the <code>multiprocessing</code> module instead of threading.</p>
+</li>
+</ol>
+<h2 id="the-future-of-python-concurrency-pep-703">The Future of Python Concurrency: PEP 703</h2>
+<p>In a groundbreaking development, PEP 703 proposes a plan to remove the GIL from CPython. This proposal, if implemented, could dramatically change how Python handles concurrency. Here are some key points:</p>
+<ol>
+<li>
+<p><strong>Gradual Removal</strong>: The GIL will be removed in stages, allowing for backwards compatibility and gradual adoption.</p>
+</li>
+<li>
+<p><strong>New Memory Management</strong>: A new memory management system using biased reference counting will replace the current system, eliminating the need for the GIL.</p>
+</li>
+<li>
+<p><strong>Performance Improvements</strong>: The removal of the GIL is expected to significantly improve the performance of multi-threaded Python programs on multi-core systems.</p>
+</li>
+<li>
+<p><strong>C API Changes</strong>: The C API will be updated to support the new concurrency model, with a transition period to help extension authors adapt their code.</p>
+</li>
+<li>
+<p><strong>Compatibility Mode</strong>: A GIL-enabled compatibility mode will be available for extensions that haven&rsquo;t been updated to work without the GIL.</p>
+</li>
+</ol>
+<h2 id="what-this-means-for-python-developers">What This Means for Python Developers</h2>
+<p>If PEP 703 is implemented, Python developers can look forward to:</p>
+<ul>
+<li>True multi-core parallelism in Python programs</li>
+<li>Improved performance for CPU-bound multi-threaded code</li>
+<li>Simplified concurrency model without sacrificing the ease of use Python is known for</li>
+</ul>
+<p>However, it&rsquo;s important to note that these changes are still in the proposal stage and will take time to implement. The Python community&rsquo;s commitment to backwards compatibility means that existing code will continue to work, even as these exciting new features are developed.</p>
+<p>Understanding the GIL and keeping an eye on developments like PEP 703 is crucial for Python developers working on concurrent applications. While the GIL has been a limitation in certain scenarios, Python&rsquo;s future looks bright with these proposed improvements to its concurrency model.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">Python</a></li>
+					
+					<li><a href="/tags/concurrency">Concurrency</a></li>
+					
+					<li><a href="/tags/gil">GIL</a></li>
+					
+					<li><a href="/tags/pep-703">PEP 703</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://www.linkedin.com/in/igorpejic/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a><a class="soc" href="https://github.com/igorpejic" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Igor Pejic 
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

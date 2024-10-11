@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>No-Build Django: Simplifying Web Development - Igor Pejic&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="In the ever-evolving landscape of web development, the concept of &ldquo;no-build&rdquo; has gained traction, challenging the complexity that has become commonplace in modern web frameworks. David Heinemeier Hansson (DHH) recently shared his thoughts on the benefits of a no-build approach in his article &ldquo;You can&rsquo;t get faster than no-build&rdquo;. While his focus was primarily on Ruby on Rails, this philosophy has interesting implications for Django developers as well.
+The No-Build Philosophy The core idea behind no-build is simple: eliminate the need for complex build processes, asset pipelines, and transpilation steps." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="No-Build Django: Simplifying Web Development" />
+<meta property="og:description" content="In the ever-evolving landscape of web development, the concept of &ldquo;no-build&rdquo; has gained traction, challenging the complexity that has become commonplace in modern web frameworks. David Heinemeier Hansson (DHH) recently shared his thoughts on the benefits of a no-build approach in his article &ldquo;You can&rsquo;t get faster than no-build&rdquo;. While his focus was primarily on Ruby on Rails, this philosophy has interesting implications for Django developers as well.
+The No-Build Philosophy The core idea behind no-build is simple: eliminate the need for complex build processes, asset pipelines, and transpilation steps." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://igorpejic.com/posts/no_build_django_perspective/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-15T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="No-Build Django: Simplifying Web Development"/>
+<meta name="twitter:description" content="In the ever-evolving landscape of web development, the concept of &ldquo;no-build&rdquo; has gained traction, challenging the complexity that has become commonplace in modern web frameworks. David Heinemeier Hansson (DHH) recently shared his thoughts on the benefits of a no-build approach in his article &ldquo;You can&rsquo;t get faster than no-build&rdquo;. While his focus was primarily on Ruby on Rails, this philosophy has interesting implications for Django developers as well.
+The No-Build Philosophy The core idea behind no-build is simple: eliminate the need for complex build processes, asset pipelines, and transpilation steps."/>
+<script src="https://igorpejic.com/js/feather.min.js"></script>
+	
+	
+        <link href="https://igorpejic.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://igorpejic.com/css/main.5cebd7d4fb2b97856af8d32a6def16164fcf7d844e98e236fcb3559655020373.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://igorpejic.com/css/dark.d22e2a2879d933a4b781535fc4c4c716e9f9d35ea4986dd0cbabda82effc4bdd.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://igorpejic.com/css/custom.325415b418af84e8606020a1ab5ae272a6bb8ddc59991f3110742cfcc85c6d02.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://igorpejic.com/">Igor Pejic&#39;s Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/contact">Contact</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://igorpejic.com/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">No-Build Django: Simplifying Web Development</h1>
+			<div class="meta">Posted on Mar 15, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<p>In the ever-evolving landscape of web development, the concept of &ldquo;no-build&rdquo; has gained traction, challenging the complexity that has become commonplace in modern web frameworks. David Heinemeier Hansson (DHH) recently shared his thoughts on the benefits of a no-build approach in his article &ldquo;You can&rsquo;t get faster than no-build&rdquo;. While his focus was primarily on Ruby on Rails, this philosophy has interesting implications for Django developers as well.</p>
+<h2 id="the-no-build-philosophy">The No-Build Philosophy</h2>
+<p>The core idea behind no-build is simple: eliminate the need for complex build processes, asset pipelines, and transpilation steps. Instead, leverage the native capabilities of web browsers and servers to create fast, efficient, and maintainable web applications.</p>
+<h2 id="djangos-potential-for-no-build">Django&rsquo;s Potential for No-Build</h2>
+<p>Django, known for its &ldquo;batteries-included&rdquo; approach, already embodies many principles that align with the no-build philosophy. Let&rsquo;s explore how we can push this further within the Django ecosystem.</p>
+<h3 id="1-leveraging-django-templates">1. Leveraging Django Templates</h3>
+<p>Django&rsquo;s template language is powerful and doesn&rsquo;t require any build step. By fully embracing Django templates, we can create dynamic, responsive interfaces without the need for a JavaScript framework:</p>
+<ul>
+<li>Use template tags and filters for dynamic content rendering</li>
+<li>Leverage template inheritance for consistent layouts</li>
+<li>Utilize Django&rsquo;s built-in form rendering capabilities for streamlined forms</li>
+</ul>
+<h3 id="2-minimal-javascript">2. Minimal JavaScript</h3>
+<p>While JavaScript has its place, many interactions can be handled server-side or with minimal client-side scripting:</p>
+<ul>
+<li>Implement essential client-side validation using vanilla JavaScript without build tools</li>
+<li>Use HTML5 attributes (like <code>required</code> and <code>pattern</code>) for basic form validation</li>
+<li>Utilize Django&rsquo;s messages framework for user notifications without heavy front-end dependencies</li>
+</ul>
+<h3 id="3-simplified-css">3. Simplified CSS</h3>
+<p>Instead of complex CSS preprocessors that require compilation, consider:</p>
+<ul>
+<li>Using vanilla CSS with modern features like CSS variables and flexbox</li>
+<li>Leveraging Django&rsquo;s static files handling for straightforward CSS inclusion</li>
+<li>Creating simple, reusable CSS classes to promote consistency without the need for utility-first frameworks that require a build step</li>
+</ul>
+<h3 id="4-embracing-server-side-rendering">4. Embracing Server-Side Rendering</h3>
+<p>Django excels at server-side rendering, delivering fully rendered pages to the client:</p>
+<ul>
+<li>Render views using templates to generate HTML on the server</li>
+<li>Use Django&rsquo;s templating system to inject dynamic data into pages</li>
+<li>Leverage Django&rsquo;s caching framework for performance optimization, reducing the need for client-side rendering</li>
+</ul>
+<h3 id="5-simplifying-asset-management">5. Simplifying Asset Management</h3>
+<p>While Django&rsquo;s <code>collectstatic</code> command is useful, a no-build approach might involve:</p>
+<ul>
+<li>Serving static files directly from your project during development</li>
+<li>Using a CDN or simple file hosting service for production assets</li>
+<li>Minimizing the use of third-party front-end libraries that require bundling or transpilation</li>
+</ul>
+<h2 id="benefits-of-no-build-django">Benefits of No-Build Django</h2>
+<ul>
+<li>Faster Development: No waiting for builds or wrestling with complex toolchains.</li>
+<li>Easier Debugging: With server-side logic and minimal JavaScript, debugging becomes straightforward.</li>
+<li>Simplified Deployment: No need for separate build steps in your deployment pipeline.</li>
+<li>Improved Accessibility: Server-rendered content is often more accessible by default.</li>
+<li>Consistent Performance: Reducing client-side processing can lead to more consistent performance across different devices.</li>
+</ul>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>While a no-build approach in Django offers many benefits, it&rsquo;s important to consider potential challenges:</p>
+<ul>
+<li>User Experience: Relying solely on server-side validation may degrade user experience compared to instant feedback provided by client-side validation</li>
+<li>Complex UI Interactions: Advanced interactivity may be more challenging without modern JavaScript frameworks</li>
+<li>Third-Party Dependencies: Some packages and libraries may assume a build process or require transpilation</li>
+<li>Team Dynamics: Developers accustomed to modern front-end workflows may need to adjust to a no-build approach</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The no-build philosophy, when applied to Django, can lead to simpler, faster, and more maintainable web applications. By leveraging Django&rsquo;s built-in features and embracing server-side rendering, we can create powerful web applications without the complexity of modern build processes.</p>
+<p>As with any architectural decision, the appropriateness of a no-build approach depends on your project&rsquo;s specific requirements. However, for many Django applications, embracing this philosophy could lead to a more enjoyable and productive development experience.</p>
+<p>Remember, as DHH pointed out, you can&rsquo;t get faster than no-build. In the Django world, we might be closer to this ideal than we think.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://www.linkedin.com/in/igorpejic/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a><a class="soc" href="https://github.com/igorpejic" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Igor Pejic 
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
