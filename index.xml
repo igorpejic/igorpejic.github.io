@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Igor Pejic&#39;s Blog</title>
-    <link>https://igorpejic.com/</link>
+    <link>http://localhost:46009/</link>
     <description>Recent content in Home on Igor Pejic&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Igor Pejic</copyright>
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://igorpejic.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:46009/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Last Call for Programmer Jobs</title>
-      <link>https://igorpejic.com/posts/programmer_job_last_call/</link>
+      <link>http://localhost:46009/posts/programmer_job_last_call/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/programmer_job_last_call/</guid>
+      <guid>http://localhost:46009/posts/programmer_job_last_call/</guid>
       <description>The landscape of software engineering is undergoing a seismic shift. Rapid advancements in artificial intelligence are signaling what I believe to be the last call for traditional programmer jobs. This is likely the last chance to secure a &amp;ldquo;traditional programming job&amp;rdquo; and if you identify solely as a &amp;ldquo;programmer,&amp;rdquo; now is the time to act decisively. It might be necessary to contemplate a strategic pivot in your career to stay relevant in an increasingly AI-driven industry.</description>
     </item>
     <item>
       <title>Django InterfaceError: Connection already closed</title>
-      <link>https://igorpejic.com/posts/interaface_error/</link>
+      <link>http://localhost:46009/posts/interaface_error/</link>
       <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/interaface_error/</guid>
+      <guid>http://localhost:46009/posts/interaface_error/</guid>
       <description>Background Stack: gunicorn + Django + pyscopg2&#xA;Error InterfaceError: Connection already closed started appearing after performing new deploys of the application. These errors would appear from multiple gunicorn workers at the same time some 60 seconds after the workers would initialize.&#xA;Understanding the stacktrace The error indicates that when Django ORM attempted to perform an SQL query through an open Psycopg2 connection, the connection was already closed. Django tries to execute the query through the assumed open connection, but when it is closed, the error occurs.</description>
     </item>
     <item>
       <title>No-Build Django: Simplifying Web Development</title>
-      <link>https://igorpejic.com/posts/no_build_django_perspective/</link>
+      <link>http://localhost:46009/posts/no_build_django_perspective/</link>
       <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/no_build_django_perspective/</guid>
+      <guid>http://localhost:46009/posts/no_build_django_perspective/</guid>
       <description>In the ever-evolving landscape of web development, the concept of &amp;ldquo;no-build&amp;rdquo; has gained traction, challenging the complexity that has become commonplace in modern web frameworks. David Heinemeier Hansson (DHH) recently shared his thoughts on the benefits of a no-build approach in his article &amp;ldquo;You can&amp;rsquo;t get faster than no-build&amp;rdquo;. While his focus was primarily on Ruby on Rails, this philosophy has interesting implications for Django developers as well.&#xA;The No-Build Philosophy The core idea behind no-build is simple: eliminate the need for complex build processes, asset pipelines, and transpilation steps.</description>
     </item>
     <item>
       <title>Tools I enjoy</title>
-      <link>https://igorpejic.com/posts/dotfiles/</link>
+      <link>http://localhost:46009/posts/dotfiles/</link>
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/dotfiles/</guid>
+      <guid>http://localhost:46009/posts/dotfiles/</guid>
       <description>Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.&#xA;From: The Pragmatic Programmer by Andy Hunt&#xA;Many years of professional software engineering have led to my opinionated list of tools and their configurations that are a daily driver to get things done.&#xA;My Toolset If I had to describe my toolset it would be:&#xA;keyboard-oriented (see this blog for the why) Vim-centric (i.</description>
     </item>
     <item>
       <title>Global Interpreter Lock (GIL) in Python: Past, Present, and Future</title>
-      <link>https://igorpejic.com/posts/gil/</link>
+      <link>http://localhost:46009/posts/gil/</link>
       <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/gil/</guid>
+      <guid>http://localhost:46009/posts/gil/</guid>
       <description>Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&amp;rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&amp;rsquo;s concurrency model.&#xA;What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once.</description>
     </item>
     <item>
       <title>It&#39;s time to stop using the mouse!</title>
-      <link>https://igorpejic.com/posts/keyboard_productivity/</link>
+      <link>http://localhost:46009/posts/keyboard_productivity/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/keyboard_productivity/</guid>
+      <guid>http://localhost:46009/posts/keyboard_productivity/</guid>
       <description>In this article, I will show you a way of thinking and working that will result in as much as a 20% increase in your productivity. Also, I will share with you the configuration I use to minimize mouse time, and some tricks I learned along the way.&#xA;Why? It started out as a joke in my teenage years when I used to claim that the best use for a mouse was to use it as a lasso for fetching things around me without having to stand up and stop coding.</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://igorpejic.com/about/</link>
+      <link>http://localhost:46009/about/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/about/</guid>
+      <guid>http://localhost:46009/about/</guid>
       <description>Welcome. I am Igor.&#xA;I spend most of my days building software, either by coding myself or helping teams.&#xA;My interests are in designing scalable systems, machine learning, algorithms and computer vision.&#xA;Below you can find my brief history.&#xA;Professional 2022-2023 | Business/Solutions Engineer | Meta ➤ Launching Beta products for Business Messaging on WhatsApp, Messenger and Instagram Direct.&#xA;➤ Helping strategic partners in EMEA reach their goals through technical innovation.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>https://igorpejic.com/contact/</link>
+      <link>http://localhost:46009/contact/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/contact/</guid>
+      <guid>http://localhost:46009/contact/</guid>
       <description>Scientific Google Scholar&#xA;Programming Github&#xA;Gitlab&#xA;Stack Overflow&#xA;Codementor&#xA;Toptal</description>
     </item>
   </channel>

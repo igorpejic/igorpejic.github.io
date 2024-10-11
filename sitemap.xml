@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://igorpejic.com/posts/programmer_job_last_call/</loc>
+    <loc>http://localhost:46009/posts/programmer_job_last_call/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/interaface_error/</loc>
+    <loc>http://localhost:46009/posts/interaface_error/</loc>
     <lastmod>2024-05-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/no_build_django_perspective/</loc>
+    <loc>http://localhost:46009/posts/no_build_django_perspective/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/dotfiles/</loc>
+    <loc>http://localhost:46009/posts/dotfiles/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/</loc>
+    <loc>http://localhost:46009/posts/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/</loc>
+    <loc>http://localhost:46009/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/tags/concurrency/</loc>
+    <loc>http://localhost:46009/tags/concurrency/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/tags/gil/</loc>
+    <loc>http://localhost:46009/tags/gil/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/gil/</loc>
+    <loc>http://localhost:46009/posts/gil/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/tags/pep-703/</loc>
+    <loc>http://localhost:46009/tags/pep-703/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/tags/python/</loc>
+    <loc>http://localhost:46009/tags/python/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/tags/</loc>
+    <loc>http://localhost:46009/tags/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/posts/keyboard_productivity/</loc>
+    <loc>http://localhost:46009/posts/keyboard_productivity/</loc>
     <lastmod>2018-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/about/</loc>
+    <loc>http://localhost:46009/about/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/contact/</loc>
+    <loc>http://localhost:46009/contact/</loc>
     <lastmod>2017-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://igorpejic.com/categories/</loc>
+    <loc>http://localhost:46009/categories/</loc>
   </url>
 </urlset>

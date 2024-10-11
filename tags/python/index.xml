@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Igor Pejic&#39;s Blog</title>
-    <link>https://igorpejic.com/tags/python/</link>
+    <link>http://localhost:46009/tags/python/</link>
     <description>Recent content in Python on Igor Pejic&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Igor Pejic</copyright>
     <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://igorpejic.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:46009/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Global Interpreter Lock (GIL) in Python: Past, Present, and Future</title>
-      <link>https://igorpejic.com/posts/gil/</link>
+      <link>http://localhost:46009/posts/gil/</link>
       <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/posts/gil/</guid>
+      <guid>http://localhost:46009/posts/gil/</guid>
       <description>Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&amp;rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&amp;rsquo;s concurrency model.&#xA;What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once.</description>
     </item>
   </channel>
