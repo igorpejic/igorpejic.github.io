@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Igor Pejic</copyright>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://igorpejic.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Last Call for Programmer Jobs</title>
@@ -38,6 +38,13 @@
       <description>Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.&#xA;From: The Pragmatic Programmer by Andy Hunt&#xA;Many years of professional software engineering have led to my opinionated list of tools and their configurations that are a daily driver to get things done.&#xA;My Toolset If I had to describe my toolset it would be:&#xA;keyboard-oriented (see this blog for the why) Vim-centric (i.</description>
     </item>
     <item>
+      <title>VS Code Shortcuts I find useful</title>
+      <link>https://igorpejic.com/posts/vs_code_shortcuts/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://igorpejic.com/posts/vs_code_shortcuts/</guid>
+      <description>Navigating to search results: After Ctrl+Shift+F, press Ctrl+ArrowDown to navigate to the next search result. [https://superuser.com/questions/1524559/shortcut-to-go-to-the-search-result-panel-in-vscode](stackoverflow link)&#xA;Or Ctrl+J with:&#xA;{ &amp;#34;key&amp;#34;: &amp;#34;ctrl+j&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;search.action.focusNextSearchResult&amp;#34;, } in keybindings.json.&#xA;Go back to file view: Ctrl+Shift+E</description>
+    </item>
+    <item>
       <title>Global Interpreter Lock (GIL) in Python: Past, Present, and Future</title>
       <link>https://igorpejic.com/posts/gil/</link>
       <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
@@ -45,18 +52,18 @@
       <description>Understanding the Global Interpreter Lock (GIL) in Python The Global Interpreter Lock, commonly known as GIL, has been a significant aspect of CPython (the reference implementation of Python) for decades. This post explores the GIL&amp;rsquo;s history, its current state, and the exciting future developments that could revolutionize Python&amp;rsquo;s concurrency model.&#xA;What is the GIL? The GIL is a mutex (or a lock) that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once.</description>
     </item>
     <item>
+      <title>About</title>
+      <link>https://igorpejic.com/about/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://igorpejic.com/about/</guid>
+      <description>Welcome. I am Igor.&#xA;I spend most of my days building software, either by coding myself or helping teams.&#xA;My interests are in designing scalable systems, machine learning, algorithms and computer vision.&#xA;Below you can find my brief history.&#xA;Professional 2022-2023 | Business/Solutions Engineer | Meta ➤ Launching Beta products for Business Messaging on WhatsApp, Messenger and Instagram Direct.&#xA;➤ Helping strategic partners in EMEA reach their goals through technical innovation.</description>
+    </item>
+    <item>
       <title>It&#39;s time to stop using the mouse!</title>
       <link>https://igorpejic.com/posts/keyboard_productivity/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       <guid>https://igorpejic.com/posts/keyboard_productivity/</guid>
       <description>In this article, I will show you a way of thinking and working that will result in as much as a 20% increase in your productivity. Also, I will share with you the configuration I use to minimize mouse time, and some tricks I learned along the way.&#xA;Why? It started out as a joke in my teenage years when I used to claim that the best use for a mouse was to use it as a lasso for fetching things around me without having to stand up and stop coding.</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://igorpejic.com/about/</link>
-      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://igorpejic.com/about/</guid>
-      <description>Welcome. I am Igor.&#xA;I spend most of my days building software, either by coding myself or helping teams.&#xA;My interests are in designing scalable systems, machine learning, algorithms and computer vision.&#xA;Below you can find my brief history.&#xA;Professional 2022-2023 | Business/Solutions Engineer | Meta ➤ Launching Beta products for Business Messaging on WhatsApp, Messenger and Instagram Direct.&#xA;➤ Helping strategic partners in EMEA reach their goals through technical innovation.</description>
     </item>
     <item>
       <title>Contact</title>

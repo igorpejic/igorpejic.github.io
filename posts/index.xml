@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Igor Pejic</copyright>
-    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://igorpejic.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Last Call for Programmer Jobs</title>
@@ -36,6 +36,13 @@
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://igorpejic.com/posts/dotfiles/</guid>
       <description>Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.&#xA;From: The Pragmatic Programmer by Andy Hunt&#xA;Many years of professional software engineering have led to my opinionated list of tools and their configurations that are a daily driver to get things done.&#xA;My Toolset If I had to describe my toolset it would be:&#xA;keyboard-oriented (see this blog for the why) Vim-centric (i.</description>
+    </item>
+    <item>
+      <title>VS Code Shortcuts I find useful</title>
+      <link>https://igorpejic.com/posts/vs_code_shortcuts/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://igorpejic.com/posts/vs_code_shortcuts/</guid>
+      <description>Navigating to search results: After Ctrl+Shift+F, press Ctrl+ArrowDown to navigate to the next search result. [https://superuser.com/questions/1524559/shortcut-to-go-to-the-search-result-panel-in-vscode](stackoverflow link)&#xA;Or Ctrl+J with:&#xA;{ &amp;#34;key&amp;#34;: &amp;#34;ctrl+j&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;search.action.focusNextSearchResult&amp;#34;, } in keybindings.json.&#xA;Go back to file view: Ctrl+Shift+E</description>
     </item>
     <item>
       <title>Global Interpreter Lock (GIL) in Python: Past, Present, and Future</title>

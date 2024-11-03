@@ -1,0 +1,74 @@
+:root {
+  --mainColor: #b1beff;
+  --bordercl: #8993c8;
+}
+
+:root {
+  --maincolor: var(--mainColor);
+}
+
+h1::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h2::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h3::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h4::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h5::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h6::before {
+  color: var(--darkMaincolor);
+  content: "";
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-top: 1.8rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5em;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5em;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-top: 1.5em;
+}
+
+
+
+body {
+  --darkMaincolor: var(--mainColor);
+}
+
+body.dark {
+  --darkMaincolor: var(--mainColor);
+}
+
+ul>li::before {
+  content: " ";
+  font-weight: bold;
+}
